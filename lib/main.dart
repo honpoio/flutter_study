@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 
 
@@ -11,7 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // 描画したいWidgetを記述する
-
+    SystemChannels.lifecycle.setMessageHandler((message){
+      print('<SystemChannels.lifecycle> $message');
+      return Future<String>.value();
+    });
     print('firstbuilding...');
 
 
@@ -119,21 +123,7 @@ class _RandomWordsState extends State<RandomWords>   {
     print('dispose->  Stateオブジェクト削除時に呼び出される');
     super.dispose();
   }
-
-  @override
-  void didChangeAppLifecycleState(AppLifecycleState state) {
-    if(state == AppLifecycleState.inactive){
-      print('inactive  非アクティブ');
-    }else if(state == AppLifecycleState.resumed){
-      print('resumed  アプリが復帰時に処理を実行');
-    }else if(state == AppLifecycleState.paused) {
-      print('paused  一時停止');
-      // }else if(state == AppLifecycleState.suspending){
-      //   //androidのみ
-      //   print('suspending');
-      // }
-    }
-  }
+  
 }
 
 

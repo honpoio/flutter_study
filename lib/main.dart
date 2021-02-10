@@ -1,6 +1,5 @@
-//https://stackoverflow.com/questions/41479255/life-cycle-in-flutter めちゃくちゃわかりやすい
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
 
 
 
@@ -12,10 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // 描画したいWidgetを記述する
-    SystemChannels.lifecycle.setMessageHandler((message){
-      print('<SystemChannels.lifecycle> $message');
-      return Future<String>.value();
-    });
+
     print('firstbuilding...');
 
 
@@ -27,7 +23,6 @@ class MyApp extends StatelessWidget {
         '/home': (BuildContext context) => new RandomWords(),
         '/subpage': (BuildContext context) => new SubPage()
       }
-      //クラスランダムワードを呼び出し
     );
   }
 
@@ -38,8 +33,6 @@ class RandomWords extends StatefulWidget {
 
   @override
   _RandomWordsState createState() => _RandomWordsState();
-
-
   //ビルド後に呼ばれるメソッド (アプリの準備が完了したらってこと？)
 }
 
@@ -65,7 +58,6 @@ class _RandomWordsState extends State<RandomWords>   {
     print('didChangeDependencies->　依存関係をいじってるクラス？');
   }
 
-////////////////////////////////////////////////////////////////////////////////
   @override
   Widget build(BuildContext context) {
     print(' secoundbuilding...');

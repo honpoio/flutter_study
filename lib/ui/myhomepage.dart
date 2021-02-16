@@ -19,7 +19,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text("home"),
+      //  widget.title
       ),
       body: Column(
           children:  <Widget>[
@@ -29,7 +30,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 title: Text("text1"),
                 trailing: Icon(Icons.more_vert),
                 subtitle: Text("This is subtitle. Subtitle is very long and use three lines"),
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).pushNamed('/subpage',arguments: "text1");
+                },
+
               ),
             ),
             Card(

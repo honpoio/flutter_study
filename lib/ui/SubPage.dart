@@ -1,36 +1,35 @@
 import 'package:flutter/material.dart';
 
 class SubPage extends StatelessWidget {
+  final String TitleTexts;
+  final String imageurl;
+
+  const SubPage({Key key, this.imageurl, this.TitleTexts}) : super(key: key);
+
+
 
 
   @override
   Widget build(BuildContext context) {
-    final String TitleTexts = ModalRoute.of(context).settings.arguments;
+    // final String TitleTexts = ModalRoute.of(context).settings.arguments;
+
 
     return new Scaffold(
       appBar: new AppBar(
         title: new Text(TitleTexts),
       ),
-      body: new Container(
-        padding: new EdgeInsets.all(32.0),
-        child: new Center(
-          child: new Column(
-            children: <Widget>[
-              Card(
-                child: ListTile(
-                  leading:  FlutterLogo(),
-                  title: Text("exmple"),
-                  trailing: Icon(Icons.more_vert),
-                  subtitle: Text('hoge'),
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
+        body: new Stack(
+          children: <Widget>[
+            new Container(
+              decoration: new BoxDecoration(
+                image: new DecorationImage(
+                  image: new AssetImage(imageurl),
+                  fit: BoxFit.cover,
                 ),
               ),
-            ],
-          ),
-        ),
-      ),
+            ),
+          ],
+        )
     );
   }
 }

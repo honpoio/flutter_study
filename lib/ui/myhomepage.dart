@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tests/ui/SubPage.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -16,65 +17,294 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
-        title: Text("home"),
+        title: Text("mypage"),
       //  widget.title
       ),
-      body: Column(
-          children:  <Widget>[
+
+      body: ListView(
+              children: <Widget>[
+
+                Card(
+                  child: Container(
+                    height: 300,
+                    child: Stack(children: <Widget>[
+                      Positioned(
+                          top: 0,
+                          left: 0,
+                          right: 0,
+                          child: Container(
+                              color: Colors.white,
+                              child: Column(
+                                children: <Widget>[
+                                  Image.asset(
+                                    'images/abe.png',
+                                    fit:BoxFit.fill,
+                                  ),
+                                ],
+                              ))),
+                      Positioned(
+                          top: 20,
+                          left: 0,
+                          right: 0,
+                          child: Container(
+                            child: Column(
+                              children: <Widget>[
+                                Text('abe',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 25,
+                                        color: Colors.white),
+                                    textAlign: TextAlign.center),
+                                RaisedButton(
+                                    child: const Text('Button'),
+                                    color: Colors.white,
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => SubPage(
+                                            TitleTexts: 'abe',
+                                            imageurl: 'images/abe.png',
+                                          ),
+                                        ),
+                                      );
+                                })
+                              ],
+                            ),
+                          )),
+
+                    ],
+                    ),
+                  ),
+
+            ),
+
             Card(
-              child: ListTile(
-                leading:  FlutterLogo(),
-                title: Text("text1"),
-                trailing: Icon(Icons.more_vert),
-                subtitle: Text("This is subtitle. Subtitle is very long and use three lines"),
+              child:InkWell(
                 onTap: () {
-                  Navigator.of(context).pushNamed('/subpage',arguments: "text1");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SubPage(
+                        TitleTexts: 'choco',
+                        imageurl: 'images/choco.png',
+                      ),
+                    ),
+                  );
                 },
 
+                child: Container(
+                  height: 300,
+                  child: Stack(children: <Widget>[
+                    Positioned(
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        child: Container(
+                            color: Colors.white,
+                            child: Column(
+                              children: <Widget>[
+                                Image.asset(
+                                  'images/choco.png',
+                                  fit:BoxFit.fill,
+                                ),
+                              ],
+                            ))),
+                    Positioned(
+                        top: 20,
+                        left: 0,
+                        right: 0,
+                        child: Container(
+                          child: Column(
+                            children: <Widget>[
+                              Text('choco',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 25,
+                                      color: Colors.white),
+                                  textAlign: TextAlign.center),
+                            ],
+                          ),
+                        )),
+
+                  ],
+                  ),
+                ),
               ),
             ),
+
             Card(
-              child: ListTile(
-                leading:  FlutterLogo(),
-                title: Text("text2"),
-                trailing: Icon(Icons.more_vert),
-                subtitle: Text("This is subtitle. Subtitle is very long and use three lines"),
-                onTap: () {},
+              // semanticContainer: true,
+              // clipBehavior: Clip.antiAliasWithSaveLayer,
+              child:InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SubPage(
+                        TitleTexts: 'didy',
+                        imageurl: 'images/didy.png',
+                      ),
+                    ),
+                  );
+                },
+
+                child: Container(
+                  height: 300,
+                  child: Stack(children: <Widget>[
+                    Positioned(
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        child: Container(
+                            color: Colors.white,
+                            child: Column(
+                              children: <Widget>[
+                                Image.asset(
+                                  'images/didy.png',
+                                  fit:BoxFit.fill,
+                                ),
+                              ],
+                            ))),
+                    Positioned(
+                        top: 20,
+                        left: 0,
+                        right: 0,
+                        child: Container(
+                          child: Column(
+                            children: <Widget>[
+                              Text('didy',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 25,
+                                      color: Colors.white),
+                                  textAlign: TextAlign.center),
+                            ],
+                          ),
+                        )),
+
+                  ],
+                  ),
+                ),
               ),
             ),
+
             Card(
-              child: ListTile(
-                leading:  FlutterLogo(),
-                title: Text("text3"),
-                trailing: Icon(Icons.more_vert),
-                subtitle: Text("This is subtitle. Subtitle is very long and use three lines"),
-                onTap: () {},
+              child:InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SubPage(
+                        TitleTexts: 'shiromo',
+                        imageurl: 'images/shiromo.png',
+                      ),
+                    ),
+                  );
+                },
+
+                child: Container(
+                  height: 300,
+                  child: Stack(children: <Widget>[
+                    Positioned(
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        child: Container(
+                            color: Colors.white,
+                            child: Column(
+                              children: <Widget>[
+                                Image.asset(
+                                  'images/shiromo.png',
+                                  fit:BoxFit.fill,
+                                ),
+                              ],
+                            ))),
+                    Positioned(
+                        top: 20,
+                        left: 0,
+                        right: 0,
+                        child: Container(
+                          child: Column(
+                            children: <Widget>[
+                              Text('shiromo',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 25,
+                                      color: Colors.white),
+                                  textAlign: TextAlign.center),
+                            ],
+                          ),
+                        )),
+
+                  ],
+                  ),
+                ),
               ),
             ),
+
             Card(
-              child: ListTile(
-                leading:  FlutterLogo(),
-                title: Text("text4"),
-                trailing: Icon(Icons.more_vert),
-                subtitle: Text("This is subtitle. Subtitle is very long and use three lines"),
-                onTap: () {},
+              child:InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SubPage(
+                        TitleTexts: 'poteto',
+                        imageurl: 'images/poteto.png',
+                      ),
+                    ),
+                  );
+                },
+
+                child: Container(
+                  height: 300,
+                  child: Stack(children: <Widget>[
+                    Positioned(
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        child: Container(
+                            color: Colors.white,
+                            child: Column(
+                              children: <Widget>[
+                                Image.asset(
+                                  'images/poteto.png',
+                                  fit:BoxFit.fill,
+                                ),
+                              ],
+                            ))),
+                    Positioned(
+                        top: 20,
+                        left: 0,
+                        right: 0,
+                        child: Container(
+                          child: Column(
+                            children: <Widget>[
+                              Text('poteto',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 25,
+                                      color: Colors.white),
+                                  textAlign: TextAlign.center),
+
+                            ],
+                          ),
+                        )),
+
+                  ],
+                  ),
+                ),
               ),
             ),
-            Card(
-              child: ListTile(
-                leading:  FlutterLogo(),
-                title: Text("text5"),
-                trailing: Icon(Icons.more_vert),
-                subtitle: Text("This is subtitle. Subtitle is very long and use three lines"),
-                onTap: () {},
-              ),
-            ),
+
           ]
       ),
     );
+
   }
 
 

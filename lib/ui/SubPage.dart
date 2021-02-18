@@ -5,9 +5,6 @@ class SubPage extends StatelessWidget {
 
   const SubPage({Key key, this.morucar_list}) : super(key: key);
 
-
-
-
   @override
   Widget build(BuildContext context) {
     var _MorukaData = new MorukaData();

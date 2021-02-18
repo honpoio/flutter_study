@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
         routes: <String, WidgetBuilder> {
-          '/home': (BuildContext context) => new MyHomePage(),
-          '/subpage': (BuildContext context) => new SubPage()
+          '/home': (BuildContext context) =>  MyHomePage(),
+          '/subpage': (BuildContext context) =>  SubPage()
         }
 
     );

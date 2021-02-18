@@ -12,10 +12,10 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final List<Map<String, dynamic>> listItems = [
-
   ];
 
   @override
+
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
@@ -65,9 +65,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => SubPage(
-                                            TitleTexts: 'abe',
-                                            imageurl: 'images/abe.png',
+                                          builder: (context,) => SubPage(
+                                            morucar_list: 'abe',
                                           ),
                                         ),
                                       );
@@ -89,8 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => SubPage(
-                        TitleTexts: 'choco',
-                        imageurl: 'images/choco.png',
+                        morucar_list: 'choco',
                       ),
                     ),
                   );
@@ -145,8 +143,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => SubPage(
-                        TitleTexts: 'didy',
-                        imageurl: 'images/didy.png',
+                        morucar_list: 'didy',
                       ),
                     ),
                   );
@@ -199,8 +196,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => SubPage(
-                        TitleTexts: 'shiromo',
-                        imageurl: 'images/shiromo.png',
+                        morucar_list: 'shiromo',
                       ),
                     ),
                   );
@@ -253,8 +249,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => SubPage(
-                        TitleTexts: 'poteto',
-                        imageurl: 'images/poteto.png',
+                        morucar_list: 'poteto',
                       ),
                     ),
                   );

@@ -66,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         context,
                                         MaterialPageRoute(
                                           builder: (context,) => SubPage(
-                                            morucar_list: 'abe',
+                                            morucar_numbers: "0",
                                           ),
                                         ),
                                       );
@@ -88,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => SubPage(
-                        morucar_list: 'choco',
+                        morucar_numbers: "1",
                       ),
                     ),
                   );
@@ -143,7 +143,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => SubPage(
-                        morucar_list: 'didy',
+                        morucar_numbers: "2",
                       ),
                     ),
                   );
@@ -196,7 +196,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => SubPage(
-                        morucar_list: 'shiromo',
+                        morucar_numbers: "3",
                       ),
                     ),
                   );
@@ -249,7 +249,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => SubPage(
-                        morucar_list: 'poteto',
+                        morucar_numbers: "4",
                       ),
                     ),
                   );
